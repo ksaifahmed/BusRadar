@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Bus Radar</string>
+
+    <!-- Home Page Strings -->
+    <string name="home_logout">Logout</string>
+    <string name="home_location">Dhanmondi, Dhaka</string>
+    <string name="home_welcome">Hey!</string>
+    <string name="home_welcome_sub">Let\'s get going</string>
+
+
 </resources>

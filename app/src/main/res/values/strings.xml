@@ -11,4 +11,5 @@
     <string name="back">Back</string>
     <string name="search_bus">Search Buses By Name</string>
     <string name="trending_header">Trending Searches</string>
+    <string name="bus_name_default">bus_name</string>
 </resources>

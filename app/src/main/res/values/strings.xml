@@ -7,5 +7,8 @@
     <string name="home_welcome">Hey!</string>
     <string name="home_welcome_sub">Let\'s get going</string>
 
-
+    <!-- Bus Search UI Strings -->
+    <string name="back">Back</string>
+    <string name="search_bus">Search Buses By Name</string>
+    <string name="trending_header">Trending Searches</string>
 </resources>

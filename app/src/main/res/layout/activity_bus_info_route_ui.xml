@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BusInfoReviewUI">
+    tools:context=".BusInfoRouteUI">
 
     <!-- Back Button -->
     <TextView
-        android:id="@+id/bus_info_rev_back"
+        android:id="@+id/bus_info_route_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/inter_semibold"
@@ -91,75 +91,106 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.406" />
-    <!-- rate star here -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/bus_info_route_bus_location"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.283"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.475" />
+
     <ImageView
-        android:id="@+id/rate_star_btn"
-        android:layout_width="212dp"
-        android:layout_height="30dp"
+        android:id="@+id/sel_route_bus_loc"
+        android:layout_width="314dp"
+        android:layout_height="135dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/rate_star"
+        android:src="@drawable/selected_route_bus_sample"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.510" />
+        app:layout_constraintVertical_bias="0.610" />
 
     <TextView
-        android:id="@+id/bus_info_rate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/inter_semibold"
-        android:text="@string/bus_info_rate_default"
+        android:text="@string/bus_info_map_guide"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.159"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.560" />
+        app:layout_constraintVertical_bias="0.720" />
+
+    <ImageView
+        android:id="@+id/map_guidance_btn"
+        android:layout_width="261dp"
+        android:layout_height="45dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/get_to_stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.780" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/bus_info_ticket_fare"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.830" />
 
     <LinearLayout
-        android:layout_width="335dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/bus_info_rev_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.690"
-        android:orientation="vertical">
+        app:layout_constraintVertical_bias="0.890"
+        android:orientation="horizontal">
+
         <TextView
-            android:id="@+id/bus_info_rev_1_name"
+            android:id="@+id/bus_info_fare"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_semibold"
-            android:text="@string/bus_info_rev_name_default"
-            android:textColor="@color/black"
-            android:textSize="15sp"
+            android:fontFamily="@font/inter_bold"
+            android:text="@string/bus_info_fare_default"
+            android:textColor="@color/green_dark_text"
+            android:textSize="20sp"
             android:layout_gravity="left"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="5dp"
             />
-        <TextView
-            android:id="@+id/bus_info_rev_1_content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_semibold"
-            android:text="@string/bus_info_rev_content_default"
-            android:textColor="@color/text_grey"
-            android:textSize="15sp"
-            android:layout_gravity="left"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="5dp"
-            />
-
+        <ImageView
+            android:layout_width="126dp"
+            android:layout_height="41dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="right"
+            android:layout_marginLeft="55dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/buy_ticket_btn" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BusRadar">
         <activity
+            android:name=".BusInfoRouteUI"
+            android:exported="false" />
+        <activity
             android:name=".BusInfoReviewUI"
             android:exported="false" />
         <activity

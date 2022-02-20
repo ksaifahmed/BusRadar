@@ -34,4 +34,9 @@
     <string name="bus_info_rate_default">Rating: 4/5</string>
     <string name="bus_info_rev_name_default">Reviewer Name</string>
     <string name="bus_info_rev_content_default">This is a sample review. I just wanna check if it overflows in width. random filler words. bla bla bla</string>
+
+    <string name="bus_info_route_bus_location">Selected Route and Bus Location</string>
+    <string name="bus_info_map_guide">Map Guidance</string>
+    <string name="bus_info_ticket_fare">Bus Ticket Fare</string>
+    <string name="bus_info_fare_default">Tk. 30</string>
 </resources>

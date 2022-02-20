@@ -12,4 +12,12 @@
     <string name="search_bus">Search Buses By Name</string>
     <string name="trending_header">Trending Searches</string>
     <string name="bus_name_default">bus_name</string>
+
+    <!-- Route Search UI Strings -->
+    <string name="route_from">From</string>
+    <string name="route_from_location">Location A</string>
+    <string name="route_to">To</string>
+    <string name="route_to_location">Location B</string>
+    <string name="route_show_sel_route">Showing Selected Route</string>
+    <string name="route_change_sel_route">You can also select the other routes(grey) on map</string>
 </resources>

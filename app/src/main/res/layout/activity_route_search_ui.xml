@@ -26,7 +26,6 @@
     <ImageView
         android:layout_width="315dp"
         android:layout_height="76dp"
-        android:background="@color/white"
         android:scaleType="centerCrop"
         android:src="@drawable/choose_route_banner"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -120,7 +119,6 @@
     <ImageView
         android:layout_width="353dp"
         android:layout_height="219dp"
-        android:background="@color/white"
         android:scaleType="centerCrop"
         android:src="@drawable/selected_route_sample"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -27,4 +27,11 @@
 
     <string name="bus_fare_default">Route Fare: Tk. 30</string>
     <string name="bus_rate_default">Rating: 4.2/5</string>
+
+    <!-- Bus Info UI Strings -->
+    <string name="bus_info_name_default">Bus Name</string>
+    <string name="bus_info_tagline_default">A Tagline</string>
+    <string name="bus_info_rate_default">Rating: 4/5</string>
+    <string name="bus_info_rev_name_default">Reviewer Name</string>
+    <string name="bus_info_rev_content_default">This is a sample review. I just wanna check if it overflows in width. random filler words. bla bla bla</string>
 </resources>

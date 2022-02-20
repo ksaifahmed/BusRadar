@@ -65,7 +65,7 @@
 
     <!-- slide button here -->
     <ImageView
-        android:id="@+id/slide_btn"
+        android:id="@+id/rate_fare_slide_btn"
         android:layout_width="251dp"
         android:layout_height="50dp"
         android:background="@color/white"
@@ -280,7 +280,6 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:background="@color/white"
         android:scaleType="fitXY"
         android:src="@drawable/bottom_static_bar"
         app:layout_constraintBottom_toBottomOf="parent"

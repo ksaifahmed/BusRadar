@@ -148,7 +148,6 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:background="@color/white"
         android:scaleType="fitXY"
         android:src="@drawable/bottom_static_bar"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -164,7 +163,6 @@
         android:id="@+id/show_buses_avail_btn"
         android:layout_width="241dp"
         android:layout_height="45dp"
-        android:background="@color/white"
         android:scaleType="centerCrop"
         android:src="@drawable/show_buses_button"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -25,6 +25,6 @@
     <string name="route_show_sel_bus">Showing Bus of Selected Route</string>
     <string name="route_sort_bus">Sort By</string>
 
-    <string name="bus_fare_default">Route Fair: Tk. 30</string>
+    <string name="bus_fare_default">Route Fare: Tk. 30</string>
     <string name="bus_rate_default">Rating: 4.2/5</string>
 </resources>

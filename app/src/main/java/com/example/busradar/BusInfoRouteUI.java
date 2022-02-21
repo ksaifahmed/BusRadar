@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class BusInfoRouteUI extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,5 +23,8 @@ public class BusInfoRouteUI extends AppCompatActivity {
         //set bus name
         TextView busNameText = findViewById(R.id.bus_info_name);
         busNameText.setText(busName);
+
+        double rating = BusInfoController.getRating(busName.toString());
+        ArrayList<Review> reviews = BusInfoController.getReviews(busName.toString());
     }
 }

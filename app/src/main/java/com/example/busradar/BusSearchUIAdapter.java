@@ -17,6 +17,10 @@ public class BusSearchUIAdapter extends ArrayAdapter {
     BusSearchUI parentActivity;
     ArrayList<Bus> busList = new ArrayList<>();
 
+    public void setBusList(ArrayList<Bus> busList) {
+        this.busList = busList;
+    }
+
     public BusSearchUIAdapter(Context context, int textViewResourceId, ArrayList<Bus> objects, BusSearchUI parentActivity) {
         super(context, textViewResourceId, objects);
         busList = objects;

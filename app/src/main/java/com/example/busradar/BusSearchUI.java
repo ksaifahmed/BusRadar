@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -29,14 +30,30 @@ public class BusSearchUI extends AppCompatActivity {
         TextView back_btn = findViewById(R.id.bus_search_back);
         back_btn.setOnClickListener(view -> go_back_home());
 
-        //gridview init
+        // gridview init
         GridView grid = findViewById(R.id.trending_grid);
         ArrayList<Bus> busList = BusSearchController.getTrendingSearches();
 
-        //filling up the grid view using adapter
+        // filling up the grid view using adapter
         BusSearchUIAdapter gridAdapter;
-        gridAdapter =new BusSearchUIAdapter(this, R.layout.bus_search_grid_item, busList, this);
+        gridAdapter = new BusSearchUIAdapter(this, R.layout.bus_search_grid_item, busList, this);
         grid.setAdapter(gridAdapter);
+
+        final Button button = findViewById(R.id.search_button);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                EditText field = (EditText) findViewById(R.id.bus_search_field);
+                String text = field .getText().toString();
+                if( ! text.equalsIgnoreCase("") ) {
+                    ArrayList<Bus> busList = BusSearchController.queryBusByName(text);
+                    TextView header = findViewById(R.id.trending_header);
+                    header.setText("Search Results");
+                    BusSearchUIAdapter gridAdapter;
+                    gridAdapter = new BusSearchUIAdapter(BusSearchUI.this, R.layout.bus_search_grid_item, busList, BusSearchUI.this);
+                    grid.setAdapter(gridAdapter);
+                }
+            }
+        });
     }
 
     //loads home again

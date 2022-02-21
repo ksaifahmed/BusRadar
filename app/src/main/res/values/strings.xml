@@ -39,4 +39,8 @@
     <string name="bus_info_map_guide">Map Guidance</string>
     <string name="bus_info_ticket_fare">Bus Ticket Fare</string>
     <string name="bus_info_fare_default">Tk. 30</string>
+
+    <!-- radio button -->
+    <string name="radio_btn_rev">Reviews</string>
+    <string name="radio_btn_route">Route</string>
 </resources>

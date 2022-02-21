@@ -62,21 +62,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.280" />
 
-    <TextView
-        android:id="@+id/bus_info_tagline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/inter_semibold"
-        android:text="@string/bus_info_tagline_default"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.330" />
-
     <!-- slide button here -->
     <LinearLayout
         android:layout_width="wrap_content"
@@ -88,63 +73,71 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.4"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
-        <RadioGroup
+
+        <TextView
+            android:id="@+id/review_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:fontFamily="@font/inter_semibold"
+            android:text="Trip Reviews"
+            android:textColor="@color/fresh_green"
+            android:textSize="14sp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.560" />
 
-            <RadioButton
-                android:id="@+id/radio_btn_rev"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/radio_btn_rev"
-                android:button="@color/white"
-                android:background="@drawable/radio_selector"
-                android:textColor="@drawable/radio_text_color"
-                android:fontFamily="@font/inter_semibold"
-                android:elevation="4dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:layout_marginRight="5dp"
-                />
-            <RadioButton
-                android:id="@+id/radio_btn_route"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/radio_btn_route"
-                android:button="@color/white"
-                android:background="@drawable/radio_selector"
-                android:textColor="@drawable/radio_text_color"
-                android:fontFamily="@font/inter_semibold"
-                android:elevation="4dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="5dp"
-                />
-        </RadioGroup>
+        <TextView
+            android:id="@+id/route_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Route"
+            android:background="@drawable/rounded_edittext"
+            android:textColor="@color/text_grey"
+            android:textSize="14sp"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.560" />
+
 
     </LinearLayout>
 
     <!-- rate star here -->
-    <ImageView
-        android:id="@+id/rate_star_btn"
-        android:layout_width="212dp"
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="180dp"
         android:layout_height="30dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/rate_star"
+        style="?android:attr/ratingBarStyleIndicator"
+        android:numStars="5"
+        android:stepSize="0.1"
+        android:isIndicator="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.510" />
+        app:layout_constraintVertical_bias="0.510"
+        />
+
 
     <TextView
-        android:id="@+id/bus_info_rate"
+        android:id="@+id/bus_info_rate_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/inter_semibold"
@@ -159,8 +152,10 @@
         app:layout_constraintVertical_bias="0.560" />
 
     <LinearLayout
+        android:id="@+id/review1_layout"
         android:layout_width="335dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/bus_info_rev_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -200,4 +195,46 @@
 
     </LinearLayout>
 
+
+    <LinearLayout
+        android:id="@+id/review2_layout"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bus_info_rev_background"
+        android:orientation="vertical"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review1_layout">
+
+        <TextView
+            android:id="@+id/bus_info_rev_2_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/bus_info_rev_name_default"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/bus_info_rev_2_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/bus_info_rev_content_default"
+            android:textColor="@color/text_grey"
+            android:textSize="15sp" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

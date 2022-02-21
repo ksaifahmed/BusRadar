@@ -50,19 +50,20 @@
         app:layout_constraintVertical_bias="0.22" />
 
     <EditText
+        android:id="@+id/sourceField"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_edittext"
         android:fontFamily="@font/inter_medium"
         android:hint="@string/route_from_location"
+        android:imeOptions="actionDone"
         android:paddingStart="18dp"
         android:paddingTop="10dp"
         android:paddingEnd="18dp"
         android:paddingBottom="10dp"
+        android:singleLine="true"
         android:textColor="@color/text_grey"
         android:textSize="17sp"
-        android:imeOptions="actionDone"
-        android:singleLine="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -85,20 +86,35 @@
         app:layout_constraintVertical_bias="0.340" />
 
     <EditText
+        android:id="@+id/destinationField"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_edittext"
         android:fontFamily="@font/inter_medium"
         android:hint="@string/route_to_location"
+        android:imeOptions="actionDone"
         android:paddingStart="18dp"
         android:paddingTop="10dp"
         android:paddingEnd="18dp"
         android:paddingBottom="10dp"
+        android:singleLine="true"
         android:textColor="@color/text_grey"
         android:textSize="17sp"
-        android:imeOptions="actionDone"
-        android:singleLine="true"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.392" />
+
+    <Button
+        android:id="@+id/route_search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="235dp"
+        app:layout_constraintBottom_toBottomOf="@+id/destinationField"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -172,5 +188,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.890" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

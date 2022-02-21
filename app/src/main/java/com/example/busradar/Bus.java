@@ -6,8 +6,7 @@ public class Bus {
     String busName;
     int imageID;
 
-    public Bus(String busName,int imageID)
-    {
+    public Bus(String busName,int imageID) {
         this.busName=busName;
         this.imageID=imageID;
     }

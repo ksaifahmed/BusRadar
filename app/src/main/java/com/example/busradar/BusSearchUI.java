@@ -31,31 +31,12 @@ public class BusSearchUI extends AppCompatActivity {
 
         //gridview init
         GridView grid = findViewById(R.id.trending_grid);
-        ArrayList<Bus> busList = new ArrayList<>();
-
-        //call to controller here:
-        populateTrendingGrid(busList);
+        ArrayList<Bus> busList = BusSearchController.getTrendingSearches();
 
         //filling up the grid view using adapter
         BusSearchUIAdapter gridAdapter;
         gridAdapter =new BusSearchUIAdapter(this, R.layout.bus_search_grid_item, busList, this);
         grid.setAdapter(gridAdapter);
-    }
-
-
-    //call to controller here:
-    private void populateTrendingGrid(ArrayList<Bus> busList) {
-        busList.add(new Bus("bus_name1",R.drawable.square_img_id1));
-        busList.add(new Bus("bus_name2",R.drawable.square_img_id2));
-        busList.add(new Bus("bus_name3",R.drawable.square_img_id3));
-
-        busList.add(new Bus("bus_name",R.drawable.square_img_id1));
-        busList.add(new Bus("bus_name",R.drawable.square_img_id1));
-        busList.add(new Bus("bus_name",R.drawable.square_img_id1));
-
-        busList.add(new Bus("bus_name",R.drawable.square_img_id1));
-        busList.add(new Bus("bus_name",R.drawable.square_img_id2));
-        busList.add(new Bus("bus_name",R.drawable.square_img_id3));
     }
 
     //loads home again
@@ -70,7 +51,8 @@ public class BusSearchUI extends AppCompatActivity {
         intent.putExtra("busName", busName); //pass data to new activity
         startActivity(intent);
     }
-
 }
+
+
 
 

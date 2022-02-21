@@ -43,4 +43,6 @@
     <!-- radio button -->
     <string name="radio_btn_rev">Reviews</string>
     <string name="radio_btn_route">Route</string>
+    <string name="radio_btn_rating">Rating</string>
+    <string name="radio_btn_fare">Fare</string>
 </resources>

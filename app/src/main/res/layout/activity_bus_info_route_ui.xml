@@ -96,6 +96,7 @@
             android:orientation="horizontal">
 
             <RadioButton
+                android:id="@+id/radio_btn_rev"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -110,6 +111,7 @@
                 android:layout_marginRight="5dp"
                 />
             <RadioButton
+                android:id="@+id/radio_btn_route"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"

@@ -82,6 +82,7 @@
             android:orientation="horizontal">
 
             <RadioButton
+                android:id="@+id/radio_btn_rating_sort"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -96,6 +97,7 @@
                 android:layout_marginRight="5dp"
                 />
             <RadioButton
+                android:id="@+id/radio_btn_fare_sort"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"

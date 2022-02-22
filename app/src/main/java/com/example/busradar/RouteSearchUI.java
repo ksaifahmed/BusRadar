@@ -9,7 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class RouteSearchUI extends AppCompatActivity {
@@ -23,32 +25,61 @@ public class RouteSearchUI extends AppCompatActivity {
         TextView back_btn = findViewById(R.id.route_search_back);
         back_btn.setOnClickListener(view -> go_back_home());
 
-        final Button button = findViewById(R.id.route_search_button);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                EditText source = findViewById(R.id.sourceField);
-                EditText destination = findViewById(R.id.destinationField);
-                String src = source.getText().toString();
-                String dst = destination.getText().toString();
-                if( !src.equalsIgnoreCase("") && !dst.equalsIgnoreCase("") ) {
-                    RouteSearchController.getRoutesSrcDst(src, dst);
-                }
-            }
-        });
-
         final ImageView img = findViewById(R.id.show_buses_avail_btn);
-        button.setOnClickListener(new View.OnClickListener() {
+        img.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 EditText source = findViewById(R.id.sourceField);
                 EditText destination = findViewById(R.id.destinationField);
                 String src = source.getText().toString();
                 String dst = destination.getText().toString();
                 if( !src.equalsIgnoreCase("") && !dst.equalsIgnoreCase("") ) {
-                    RouteSearchController.getBusesAvailable(RouteSearchController.getRoutesSrcDst(src, dst));
-
+                    BusRoute route = RouteSearchController.getRoutesSrcDst(src, dst);
+                    if( route.getBusStops().size()==0 ) {
+                        Toast.makeText(getApplicationContext(), "Unknown Source/Destination", Toast.LENGTH_LONG).show();
+                    }
+                    else loadRouteSearchShowBusUI(src, dst);
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "Empty Source/Destination", Toast.LENGTH_LONG).show();
                 }
             }
         });
+
+        Button b = findViewById(R.id.btn);
+        b.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        EditText source = findViewById(R.id.sourceField);
+                        EditText destination = findViewById(R.id.destinationField);
+                        String src = source.getText().toString();
+                        String dst = destination.getText().toString();
+                        if( !src.equalsIgnoreCase("") && !dst.equalsIgnoreCase("") ) {
+                            BusRoute route = RouteSearchController.getRoutesSrcDst(src, dst);
+                            if( route.getBusStops().size()==0 ) {
+                                Toast.makeText(getApplicationContext(), "Unknown Source/Destination", Toast.LENGTH_LONG).show();
+                            }
+                            else {
+                                Intent intent = new Intent(getApplicationContext(), MapActivity.class);
+                                Bundle args = new Bundle();
+                                args.putSerializable("route",(Serializable)route);
+                                intent.putExtra("BUNDLE",args);
+                                startActivity(intent);
+                            }
+                        }
+                        else {
+                            Toast.makeText(getApplicationContext(), "Empty Source/Destination", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                }
+        );
+    }
+
+    private void loadRouteSearchShowBusUI(String src, String dst) {
+        Intent intent = new Intent(this, RouteSearchShowBusUI.class);
+        intent.putExtra("src", src);
+        intent.putExtra("dst", dst);
+        startActivity(intent);
     }
 
     //loads home again

@@ -8,7 +8,7 @@
     <string name="home_welcome_sub">Let\'s get going</string>
 
     <!-- Bus Search UI Strings -->
-    <string name="back">Back</string>
+    <string name="back">Home</string>
     <string name="search_bus">Search Buses By Name</string>
     <string name="trending_header">Trending Searches</string>
     <string name="bus_name_default">bus_name</string>
@@ -45,4 +45,6 @@
     <string name="radio_btn_route">Route</string>
     <string name="radio_btn_rating">Rating</string>
     <string name="radio_btn_fare">Fare</string>
+
+    <string name="map_key" translatable="false">AIzaSyAhEl7PNa5XIk876o93Ty6D7pYZSe_z8XA</string>
 </resources>

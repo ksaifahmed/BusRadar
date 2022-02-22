@@ -38,6 +38,7 @@ public class BusSearchController {
             int count = (int) in.readObject();
             for( int i=0; i<count; i++ ) {
                 String busName = (String) in.readObject();
+                for(int j=0; j<100; j++ ) System.out.println(busName + " HERE");
                 trendingBuses.add(new Bus(busName, R.drawable.square_img_id1));
             }
             socket.close();

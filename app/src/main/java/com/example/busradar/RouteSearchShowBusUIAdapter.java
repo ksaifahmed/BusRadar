@@ -35,12 +35,12 @@ public class RouteSearchShowBusUIAdapter extends ArrayAdapter {
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         v = inflater.inflate(R.layout.route_search_show_bus_grid_item, null);
         TextView busName = (TextView) v.findViewById(R.id.avail_bus_1_name);
-//        TextView busFare = (TextView) v.findViewById(R.id.avail_bus_1_fare);
-//        TextView busRating = (TextView) v.findViewById(R.id.avail_bus_1_rating);
+        TextView busFare = (TextView) v.findViewById(R.id.avail_bus_1_fare);
+        TextView busRating = (TextView) v.findViewById(R.id.avail_bus_1_rating);
         ImageView busImage = (ImageView) v.findViewById(R.id.avail_bus_1_img);
         busName.setText(busList.get(position).getBusName());
-//        busFare.setText(busList.get(position).getBusFare());
-//        busRating.setText(busList.get(position).getBusRating());
+        busFare.setText("Fare: "+Double.toString(busList.get(position).getFare()));
+        busRating.setText("Rating: "+Double.toString(busList.get(position).getRating()));
         busImage.setImageResource(busList.get(position).getImageID());
 
 
